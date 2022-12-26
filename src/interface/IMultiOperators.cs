@@ -2,20 +2,13 @@ using System.Numerics;
 
 namespace Nixill.Units;
 
-public interface INumericMultiplicationOperators<TSelf> :
-    IMultiplyOperators<TSelf, double, TSelf>,
-    IMultiplyOperators<TSelf, float, TSelf>,
-    IMultiplyOperators<TSelf, decimal, TSelf>,
-    IMultiplyOperators<TSelf, byte, TSelf>,
-    IMultiplyOperators<TSelf, sbyte, TSelf>,
-    IMultiplyOperators<TSelf, short, TSelf>,
-    IMultiplyOperators<TSelf, ushort, TSelf>,
-    IMultiplyOperators<TSelf, int, TSelf>,
-    IMultiplyOperators<TSelf, uint, TSelf>,
-    IMultiplyOperators<TSelf, long, TSelf>,
-    IMultiplyOperators<TSelf, ulong, TSelf>,
-    IMultiplyOperators<TSelf, nint, TSelf>,
-    IMultiplyOperators<TSelf, nuint, TSelf>
+public interface INumericMultiplicationOperators<TSelf> : IMultiplyOperators<TSelf, double, TSelf>,
+    IMultiplyOperators<TSelf, float, TSelf>, IMultiplyOperators<TSelf, decimal, TSelf>,
+    IMultiplyOperators<TSelf, byte, TSelf>, IMultiplyOperators<TSelf, sbyte, TSelf>,
+    IMultiplyOperators<TSelf, short, TSelf>, IMultiplyOperators<TSelf, ushort, TSelf>,
+    IMultiplyOperators<TSelf, int, TSelf>, IMultiplyOperators<TSelf, uint, TSelf>,
+    IMultiplyOperators<TSelf, long, TSelf>, IMultiplyOperators<TSelf, ulong, TSelf>,
+    IMultiplyOperators<TSelf, nint, TSelf>, IMultiplyOperators<TSelf, nuint, TSelf>
   where TSelf : INumericMultiplicationOperators<TSelf>
 {
   public static abstract TSelf operator *(double left, TSelf right);
@@ -34,18 +27,12 @@ public interface INumericMultiplicationOperators<TSelf> :
 }
 
 public interface INumericDivisionOperators<TSelf> :
-    IDivisionOperators<TSelf, double, TSelf>,
-    IDivisionOperators<TSelf, float, TSelf>,
-    IDivisionOperators<TSelf, decimal, TSelf>,
-    IDivisionOperators<TSelf, byte, TSelf>,
-    IDivisionOperators<TSelf, sbyte, TSelf>,
-    IDivisionOperators<TSelf, short, TSelf>,
-    IDivisionOperators<TSelf, ushort, TSelf>,
-    IDivisionOperators<TSelf, int, TSelf>,
-    IDivisionOperators<TSelf, uint, TSelf>,
-    IDivisionOperators<TSelf, long, TSelf>,
-    IDivisionOperators<TSelf, ulong, TSelf>,
-    IDivisionOperators<TSelf, nint, TSelf>,
+    IDivisionOperators<TSelf, double, TSelf>, IDivisionOperators<TSelf, float, TSelf>,
+    IDivisionOperators<TSelf, decimal, TSelf>, IDivisionOperators<TSelf, byte, TSelf>,
+    IDivisionOperators<TSelf, sbyte, TSelf>, IDivisionOperators<TSelf, short, TSelf>,
+    IDivisionOperators<TSelf, ushort, TSelf>, IDivisionOperators<TSelf, int, TSelf>,
+    IDivisionOperators<TSelf, uint, TSelf>, IDivisionOperators<TSelf, long, TSelf>,
+    IDivisionOperators<TSelf, ulong, TSelf>, IDivisionOperators<TSelf, nint, TSelf>,
     IDivisionOperators<TSelf, nuint, TSelf>
   where TSelf : INumericDivisionOperators<TSelf>
 {
