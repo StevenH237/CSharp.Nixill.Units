@@ -9,5 +9,15 @@ public interface ILinearMeasurement<TSelf> : IAdditionOperators<TSelf, TSelf, TS
   IUnaryNegationOperators<TSelf, TSelf>, IUnaryPlusOperators<TSelf, TSelf>
 where TSelf : ILinearMeasurement<TSelf>
 {
+  public static abstract ILinearUnit<TSelf> SIUnit { get; }
 
+  public ILinearUnit<TSelf> Unit { get; }
+  public double Amount { get; }
+
+  public ILinearMeasurement<TSelf> WithOtherUnit(ILinearUnit<TSelf> unit);
+
+  public bool Equals(object? other);
+  public int GetHashCode();
+
+  public string? ToString();
 }
